@@ -1,5 +1,23 @@
+.landing-page__container {
+    display: flex;
+    justify-content: center;
+}
+
+.landing-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .search-bar {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
 .topnav {
     display: flex;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     height: 80px;
@@ -27,6 +45,7 @@
 .search-suggestions {
     width: 100%;
     display: flex;
+    justify-content: center;
 
     &__item {
         font-size: 0.75rem;

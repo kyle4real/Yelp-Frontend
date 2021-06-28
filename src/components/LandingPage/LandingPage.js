@@ -6,13 +6,14 @@ import SearchSuggestions from "./SearchSuggestions/SearchSuggestions";
 
 const LandingPage = () => {
     return (
-        <>
-            <TopNav />
-            <div>Landing Page</div>
-            <img className="logo" src={logo} alt="logo" />
-            <SearchBar />
-            <SearchSuggestions />
-        </>
+        <div className="landing-page__container">
+            <div className="landing-page">
+                <TopNav />
+                <img className="logo" src={logo} alt="logo" />
+                <SearchBar />
+                <SearchSuggestions />
+            </div>
+        </div>
     );
 };
 

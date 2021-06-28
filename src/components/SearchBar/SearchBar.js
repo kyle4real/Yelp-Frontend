@@ -7,7 +7,7 @@ const SearchBar = () => {
     };
 
     return (
-        <>
+        <div className="search-bar">
             <form className="field has-addons" onSubmit={handleOnSubmit}>
                 <p className="control">
                     <a href="/" className="button is-static is-medium">
@@ -39,7 +39,7 @@ const SearchBar = () => {
                     </span>
                 </button>
             </form>
-        </>
+        </div>
     );
 };
 
