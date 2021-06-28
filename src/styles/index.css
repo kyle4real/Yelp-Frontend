@@ -150,6 +150,10 @@ img {
   height: auto;
 }
 
+.input-control {
+  min-width: 320px;
+}
+
 .topnav {
   display: flex;
   justify-content: space-between;
