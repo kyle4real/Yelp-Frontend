@@ -135,7 +135,9 @@ table {
   border-spacing: 0;
 }
 
-* {
+*,
+::before,
+::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -185,7 +187,21 @@ img {
 
 .logo {
   width: 180px;
-  margin: 50px 0;
+  margin: 50px;
+}
+
+.search-suggestions {
+  width: 100%;
+  display: flex;
+}
+.search-suggestions__item {
+  font-size: 0.75rem;
+}
+.search-suggestions__item:not(:last-child) {
+  margin-right: 1.5rem;
+}
+.search-suggestions__title {
+  margin-left: 4px;
 }
 
 /*# sourceMappingURL=index.css.map */
