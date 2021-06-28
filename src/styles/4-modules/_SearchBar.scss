@@ -1,3 +1,14 @@
 .input-control {
     min-width: 320px;
 }
+
+.search-button {
+    background: #bd1f1f;
+    border: none;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+
+    &__icon {
+        color: white;
+    }
+}

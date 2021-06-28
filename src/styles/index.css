@@ -154,6 +154,16 @@ img {
   min-width: 320px;
 }
 
+.search-button {
+  background: #bd1f1f;
+  border: none;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.search-button__icon {
+  color: white;
+}
+
 .topnav {
   display: flex;
   justify-content: space-between;

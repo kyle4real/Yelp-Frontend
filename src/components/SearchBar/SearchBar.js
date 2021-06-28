@@ -1,9 +1,14 @@
 import React from "react";
 
 const SearchBar = () => {
+    const handleOnSubmit = (e) => {
+        e.preventDefault();
+        console.log("submitted");
+    };
+
     return (
         <>
-            <div className="field has-addons">
+            <form className="field has-addons" onSubmit={handleOnSubmit}>
                 <p className="control">
                     <a href="/" className="button is-static is-medium">
                         Search
@@ -28,7 +33,12 @@ const SearchBar = () => {
                         placeholder="Where"
                     />
                 </p>
-            </div>
+                <button className="button is-medium search-button" onClick={handleOnSubmit}>
+                    <span className="icon is-small">
+                        <i className="fas fa-search search-button__icon"></i>
+                    </span>
+                </button>
+            </form>
         </>
     );
 };
