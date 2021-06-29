@@ -1,0 +1,28 @@
+.subnav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-buttons {
+        display: flex;
+
+        &__item {
+            border-left: 1px solid rgb(230, 230, 230);
+            padding: 0.5rem 0.5rem;
+            user-select: none;
+            cursor: pointer;
+            transition: color 0.3s ease;
+
+            .icon {
+                margin-right: 6px;
+            }
+        }
+        &__item:hover {
+            color: $mainRed;
+        }
+
+        &:last-child {
+            border-right: 1px solid rgb(230, 230, 230);
+        }
+    }
+}

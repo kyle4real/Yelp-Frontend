@@ -6,7 +6,7 @@ import SearchBar from "../SearchBar/SearchBar";
 const NavBar = () => {
     return (
         <div className="navbar__container">
-            <div className="navbar">
+            <div className="navbar standard-container">
                 <img className="navbar__logo" src={logo} alt="logo" />
                 <SearchBar small />
                 <div className="navbar__buttons">

@@ -21,10 +21,26 @@ const SubNav = () => {
         },
     ];
     return (
-        <div>
-            {SubNavItemData.map((data) => {
-                return <SubNavItem {...data} />;
-            })}
+        <div className="subnav standard-container">
+            <div>
+                {SubNavItemData.map((data) => {
+                    return <SubNavItem {...data} />;
+                })}
+            </div>
+            <div className="subnav-buttons">
+                <div className="subnav-buttons__item">
+                    <span className="icon">
+                        <i className="fas fa-pen"></i>
+                    </span>
+                    <span>Write a Review</span>
+                </div>
+                <div className="subnav-buttons__item">
+                    <span className="icon">
+                        <i className="fas fa-hotel"></i>
+                    </span>
+                    <span>For businesses</span>
+                </div>
+            </div>
         </div>
     );
 };

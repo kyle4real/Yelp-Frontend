@@ -152,6 +152,12 @@ img {
   height: auto;
 }
 
+.standard-container {
+  max-width: 1200px;
+  width: calc(100% - 3rem);
+  margin: 0 auto;
+}
+
 .subnavitem-trigger {
   padding: 0.5rem 0.5rem;
   border-left: 1px solid #e6e6e6;
@@ -175,7 +181,32 @@ img {
 .subnavitem-trigger:hover .subnavitem-trigger__down {
   color: #d32323;
 }
-.subnavitem:nth-child(4) .subnavitem-trigger {
+.subnavitem:last-child .subnavitem-trigger {
+  border-right: 1px solid #e6e6e6;
+}
+
+.subnav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.subnav-buttons {
+  display: flex;
+}
+.subnav-buttons__item {
+  border-left: 1px solid #e6e6e6;
+  padding: 0.5rem 0.5rem;
+  user-select: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.subnav-buttons__item .icon {
+  margin-right: 6px;
+}
+.subnav-buttons__item:hover {
+  color: #d32323;
+}
+.subnav-buttons:last-child {
   border-right: 1px solid #e6e6e6;
 }
 
@@ -187,11 +218,9 @@ img {
 .navbar {
   margin: 0 auto;
   background: transparent;
-  max-width: 1440px;
-  width: calc(100% - 3rem);
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   padding: 1rem 0;
 }
 .navbar__logo {

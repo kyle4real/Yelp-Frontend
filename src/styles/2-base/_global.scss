@@ -14,3 +14,9 @@ img {
     width: 100%;
     height: auto;
 }
+
+.standard-container {
+    max-width: 1200px;
+    width: calc(100% - 3rem);
+    margin: 0 auto;
+}

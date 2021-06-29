@@ -23,7 +23,7 @@
         color: $mainRed;
     }
 
-    &:nth-child(4) .subnavitem-trigger {
+    &:last-child .subnavitem-trigger {
         border-right: 1px solid rgb(230, 230, 230);
     }
 }
