@@ -5,6 +5,7 @@ const Search = () => {
     return (
         <div>
             <NavBar />
+            Search Page
         </div>
     );
 };

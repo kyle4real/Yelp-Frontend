@@ -152,6 +152,32 @@ img {
   height: auto;
 }
 
+.navbar__container {
+  background: #d32323;
+  width: 100%;
+}
+
+.navbar {
+  margin: 0 auto;
+  background: transparent;
+  max-width: 1440px;
+  width: calc(100% - 3rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+}
+.navbar__logo {
+  width: 125px;
+  margin-right: 1rem;
+}
+.navbar__buttons {
+  margin-left: 1rem;
+}
+.navbar__buttons .button:not(:last-child) {
+  margin-right: 1rem;
+}
+
 .input-control {
   min-width: 320px;
 }
