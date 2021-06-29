@@ -152,6 +152,33 @@ img {
   height: auto;
 }
 
+.subnavitem-trigger {
+  padding: 0.5rem 0.5rem;
+  border-left: 1px solid #e6e6e6;
+}
+.subnavitem-trigger__icon {
+  font-size: 0.93rem;
+}
+.subnavitem-trigger div {
+  display: flex;
+  align-items: center;
+}
+.subnavitem-trigger div *:not(:last-child) {
+  margin-right: 6px;
+}
+.subnavitem-trigger__label {
+  user-select: none;
+}
+.subnavitem-trigger__down {
+  transition: color 0.2s ease;
+}
+.subnavitem-trigger:hover .subnavitem-trigger__down {
+  color: #d32323;
+}
+.subnavitem:nth-child(4) .subnavitem-trigger {
+  border-right: 1px solid #e6e6e6;
+}
+
 .navbar__container {
   background: #d32323;
   width: 100%;

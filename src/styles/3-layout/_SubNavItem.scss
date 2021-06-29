@@ -1,0 +1,29 @@
+.subnavitem {
+    &-trigger {
+        padding: 0.5rem 0.5rem;
+        border-left: 1px solid rgb(230, 230, 230);
+        &__icon {
+            font-size: 0.93rem;
+        }
+        div {
+            display: flex;
+            align-items: center;
+            *:not(:last-child) {
+                margin-right: 6px;
+            }
+        }
+        &__label {
+            user-select: none;
+        }
+        &__down {
+            transition: color 0.2s ease;
+        }
+    }
+    &-trigger:hover &-trigger__down {
+        color: $mainRed;
+    }
+
+    &:nth-child(4) .subnavitem-trigger {
+        border-right: 1px solid rgb(230, 230, 230);
+    }
+}
