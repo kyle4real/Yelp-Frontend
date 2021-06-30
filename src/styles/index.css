@@ -158,6 +158,43 @@ img {
   margin: 0 auto;
 }
 
+.search-result {
+  display: flex;
+}
+.search-result:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.search-result__img {
+  width: 210px;
+  border-radius: 4px;
+}
+.search-result .general-info {
+  flex: 1;
+}
+.search-result .general-info__title {
+  padding-top: 0.2rem;
+}
+.search-result .general-info__rating {
+  margin-bottom: 0.5rem;
+}
+.search-result .general-info__tags {
+  display: flex;
+}
+.search-result .general-info__tags > *:not(:last-child) {
+  margin-right: 0.2rem;
+}
+.search-result__contact {
+  flex: 1;
+  font-size: 0.9rem;
+}
+.search-result > *:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.search-results {
+  padding: 1rem 0;
+}
+
 .search-summary__container {
   background: whitesmoke;
   border-top: 1px solid #e6e6e6;
@@ -260,6 +297,11 @@ img {
 }
 .navbar__buttons .button:not(:last-child) {
   margin-right: 1rem;
+}
+
+.business-rating {
+  display: flex;
+  align-items: center;
 }
 
 .input-control {
