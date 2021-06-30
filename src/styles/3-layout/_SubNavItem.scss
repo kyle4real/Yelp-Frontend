@@ -1,7 +1,7 @@
 .subnavitem {
     &-trigger {
         padding: 0.5rem 0.5rem;
-        border-left: 1px solid rgb(230, 230, 230);
+        border-left: 1px solid $greyBorder;
         &__icon {
             font-size: 0.93rem;
         }
@@ -24,6 +24,6 @@
     }
 
     &:last-child .subnavitem-trigger {
-        border-right: 1px solid rgb(230, 230, 230);
+        border-right: 1px solid $greyBorder;
     }
 }

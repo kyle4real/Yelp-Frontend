@@ -1,0 +1,30 @@
+.search-summary__container {
+    background: $lightGrey;
+    border-top: 1px solid $greyBorder;
+    border-bottom: 1px solid $greyBorder;
+}
+
+.search-summary {
+    padding: 1.5rem 0;
+
+    &__top {
+        .subtitle {
+            margin-bottom: 0;
+        }
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        p {
+            font-size: 0.9rem;
+        }
+        margin-bottom: 1.2rem;
+    }
+
+    &__filters {
+        display: flex;
+
+        & > *:not(:last-child) {
+            margin-right: 0.7rem;
+        }
+    }
+}

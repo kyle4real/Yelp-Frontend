@@ -158,6 +158,34 @@ img {
   margin: 0 auto;
 }
 
+.search-summary__container {
+  background: whitesmoke;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.search-summary {
+  padding: 1.5rem 0;
+}
+.search-summary__top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+}
+.search-summary__top .subtitle {
+  margin-bottom: 0;
+}
+.search-summary__top p {
+  font-size: 0.9rem;
+}
+.search-summary__filters {
+  display: flex;
+}
+.search-summary__filters > *:not(:last-child) {
+  margin-right: 0.7rem;
+}
+
 .subnavitem-trigger {
   padding: 0.5rem 0.5rem;
   border-left: 1px solid #e6e6e6;
