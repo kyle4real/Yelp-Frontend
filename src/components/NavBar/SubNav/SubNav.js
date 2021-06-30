@@ -1,5 +1,6 @@
 import React from "react";
 import SubNavItem from "./SubNavItem/SubNavItem";
+import nextId from "react-id-generator";
 
 const SubNav = () => {
     const SubNavItemData = [
@@ -24,7 +25,7 @@ const SubNav = () => {
         <div className="subnav standard-container">
             <div>
                 {SubNavItemData.map((data) => {
-                    return <SubNavItem {...data} />;
+                    return <SubNavItem {...data} key={nextId("subnav-item-")} />;
                 })}
             </div>
             <div className="subnav-buttons">
