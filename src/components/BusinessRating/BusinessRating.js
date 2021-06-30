@@ -13,6 +13,7 @@ const BusinessRating = () => {
                     initialRating={3.5}
                     readonly
                 />
+                <span className="business-rating__count">720 Reviews</span>
             </div>
         </div>
     );

@@ -1,4 +1,12 @@
 .business-rating {
     display: flex;
     align-items: center;
+
+    &__count {
+        font-size: 0.9rem;
+    }
+
+    & > *:not(:last-child) {
+        margin-right: 0.3rem;
+    }
 }

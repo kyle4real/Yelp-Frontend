@@ -8,6 +8,7 @@ const SearchResult = () => {
             <img className="search-result__img" src="https://via.placeholder.com/210" alt="" />
             <div className="general-info">
                 <h2 className="general-info__title subtitle">Burger Place</h2>
+                <h2 className="general-info__profession">Restaurant</h2>
                 <div className="general-info__rating">
                     <BusinessRating />
                 </div>
@@ -18,6 +19,9 @@ const SearchResult = () => {
                 </div>
             </div>
             <div className="search-result__contact">
+                <p className="open-now">
+                    <i className="fas fa-clock"></i> Open Now
+                </p>
                 <p>2158596601</p>
                 <p>Street 135</p>
                 <p>1414 Texas</p>
