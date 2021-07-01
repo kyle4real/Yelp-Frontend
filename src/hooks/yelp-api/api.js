@@ -1,7 +1,7 @@
 import { API_BASE_URL, BEARER_TOKEN } from "./config";
 import queryString from "query-string";
 
-const get = (path, queryParams) => {
+export const get = (path, queryParams) => {
     const query = queryString.stringify(queryParams);
     return fetch(`${API_BASE_URL}${path}?${query}`, {
         headers: {
