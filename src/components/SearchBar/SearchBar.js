@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 
-const SearchBar = ({ small, searchTerm, searchLocation }) => {
+const SearchBar = ({ small, search, searchTerm, searchLocation }) => {
     const [term, setTerm] = useState(searchTerm || "");
     const [location, setLocation] = useState(searchLocation || "");
 
     const handleOnSubmit = (e) => {
         e.preventDefault();
-        console.log(term, location);
+        if (typeof search === "function") {
+            search(term, location);
+        }
     };
 
     const sizeClass = small ? "" : "is-medium";
