@@ -1,12 +1,12 @@
 import React from "react";
 
-const SearchResultsSummary = () => {
+const SearchResultsSummary = ({ searchTerm, searchLocation }) => {
     return (
         <div className="search-summary__container">
             <div className="search-summary standard-container">
                 <div className="search-summary__top">
                     <h1 className="subtitle">
-                        <strong>burgers</strong> berlin
+                        <strong>{searchTerm}</strong> {searchLocation}
                     </h1>
                     <p>Showing 1-20 out of 200 results</p>
                 </div>

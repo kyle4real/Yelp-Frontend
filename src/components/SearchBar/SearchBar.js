@@ -24,6 +24,7 @@ const SearchBar = ({ small, search, searchTerm, searchLocation }) => {
                         onChange={(e) => setTerm(e.target.value)}
                         type="text"
                         placeholder="burgers, barbers, spas, handymen"
+                        value={term}
                     />
                 </div>
                 <div className="control">
@@ -35,6 +36,7 @@ const SearchBar = ({ small, search, searchTerm, searchLocation }) => {
                         onChange={(e) => setLocation(e.target.value)}
                         type="text"
                         placeholder="Where"
+                        value={location}
                     />
                 </div>
                 <button className={`button search-button ${sizeClass}`} onClick={handleOnSubmit}>
