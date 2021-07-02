@@ -1,10 +1,11 @@
 import React from "react";
 
 import SearchResult from "./SearchResult/SearchResult";
+import Spinner from "../../Spinner/Spinner";
 
 const SearchResults = ({ businesses }) => {
     if (!businesses || !businesses.length) {
-        return <div>No Results</div>;
+        return <Spinner />;
     }
 
     console.log(businesses);
