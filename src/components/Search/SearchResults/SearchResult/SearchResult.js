@@ -41,7 +41,7 @@ const SearchResult = ({ business }) => {
             </div>
             <div className="general-info">
                 <h2 className="general-info__title subtitle">{name}</h2>
-                <h2 className="general-info__profession has-text-grey">Restaurant</h2>
+                {/* <h2 className="general-info__profession has-text-grey">Restaurant</h2> */}
                 <div className="general-info__rating">
                     <BusinessRating reviewCount={review_count} rating={rating} />
                 </div>

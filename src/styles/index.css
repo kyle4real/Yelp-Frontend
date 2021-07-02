@@ -174,10 +174,7 @@ img {
   padding-top: 0.2rem;
 }
 .search-result .general-info__title {
-  margin-bottom: 0.2rem;
-}
-.search-result .general-info__profession {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 .search-result .general-info__rating {
   margin-bottom: 0.6rem;
