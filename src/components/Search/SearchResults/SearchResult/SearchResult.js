@@ -6,13 +6,32 @@ const SearchResult = ({ business }) => {
     if (!business) {
         return <div />;
     }
-    const { image_url, name, is_closed, review_count, rating, categories, id } = business;
+    const {
+        image_url,
+        name,
+        is_closed,
+        review_count,
+        rating,
+        categories,
+        id,
+        price,
+        phone,
+        location,
+    } = business;
 
     const tags = categories.map((tag) => {
         return (
             <span className="tag" key={`${id}-${tag.title}`}>
                 {tag.title}
             </span>
+        );
+    });
+
+    const address = location.display_address.map((line) => {
+        return (
+            <p className="contact-info__address-line" key={`${id}-${line}`}>
+                {line}
+            </p>
         );
     });
     return (
@@ -27,21 +46,20 @@ const SearchResult = ({ business }) => {
                     <BusinessRating reviewCount={review_count} rating={rating} />
                 </div>
                 <div className="general-info__tags">
-                    <span className="tag">$$</span>
+                    {price && <span className="tag">{price}</span>}
                     {tags}
                 </div>
             </div>
-            <div className="search-result__contact">
-                <p className="open-now">
+            <div className="contact-info">
+                <p className="contact-info__open-now">
                     <i
                         style={is_closed ? { color: "red" } : { color: "green" }}
                         className="fas fa-clock"
                     ></i>{" "}
                     {is_closed ? "Closed" : "Open"} Now
                 </p>
-                <p>2158596601</p>
-                <p>Street 135</p>
-                <p>1414 Texas</p>
+                <p className="contact-info__phone">{phone}</p>
+                {address}
             </div>
         </div>
     );
