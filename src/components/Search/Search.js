@@ -16,6 +16,10 @@ const Search = () => {
         searchLocation
     );
 
+    if (!searchTerm || !searchLocation) {
+        history.push("/");
+    }
+
     const search = (term, location) => {
         // redirect
         const encodedTerm = encodeURI(term);
