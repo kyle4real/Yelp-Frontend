@@ -166,6 +166,7 @@ img {
 }
 .search-result__img {
   width: 210px;
+  height: 210px;
   border-radius: 4px;
 }
 .search-result .general-info {

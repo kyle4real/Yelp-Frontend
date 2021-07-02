@@ -2,15 +2,21 @@ import React from "react";
 
 import BusinessRating from "../../../BusinessRating/BusinessRating";
 
-const SearchResult = () => {
+const SearchResult = ({ business }) => {
+    if (!business) {
+        return <div />;
+    }
+    const { image_url, name, is_closed, review_count, rating } = business;
     return (
         <div className="search-result">
-            <img className="search-result__img" src="https://via.placeholder.com/210" alt="" />
+            <div className="search-result__img-container">
+                <img className="search-result__img" src={image_url} alt={name + " image"} />
+            </div>
             <div className="general-info">
-                <h2 className="general-info__title subtitle">Burger Place</h2>
+                <h2 className="general-info__title subtitle">{name}</h2>
                 <h2 className="general-info__profession">Restaurant</h2>
                 <div className="general-info__rating">
-                    <BusinessRating />
+                    <BusinessRating reviewCount={review_count} rating={rating} />
                 </div>
                 <div className="general-info__tags">
                     <span className="tag">$$</span>
@@ -20,7 +26,11 @@ const SearchResult = () => {
             </div>
             <div className="search-result__contact">
                 <p className="open-now">
-                    <i className="fas fa-clock"></i> Open Now
+                    <i
+                        style={is_closed ? { color: "red" } : { color: "green" }}
+                        className="fas fa-clock"
+                    ></i>{" "}
+                    {is_closed ? "Closed" : "Open"} Now
                 </p>
                 <p>2158596601</p>
                 <p>Street 135</p>
