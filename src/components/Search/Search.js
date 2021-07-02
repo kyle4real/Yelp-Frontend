@@ -21,7 +21,7 @@ const Search = () => {
             <NavBar searchTerm={searchTerm} searchLocation={searchLocation} />
             <SubNav />
             <SearchResultsSummary searchTerm={searchTerm} searchLocation={searchLocation} />
-            <SearchResults />
+            <SearchResults businesses={businesses} />
         </div>
     );
 };
