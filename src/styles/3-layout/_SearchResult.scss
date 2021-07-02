@@ -24,6 +24,10 @@
         &__tags {
             display: flex;
 
+            & > * {
+                cursor: pointer;
+            }
+
             & > *:not(:last-child) {
                 margin-right: 0.2rem;
             }

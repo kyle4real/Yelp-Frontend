@@ -6,7 +6,15 @@ const SearchResult = ({ business }) => {
     if (!business) {
         return <div />;
     }
-    const { image_url, name, is_closed, review_count, rating } = business;
+    const { image_url, name, is_closed, review_count, rating, categories, id } = business;
+
+    const tags = categories.map((tag) => {
+        return (
+            <span className="tag" key={`${id}-${tag.title}`}>
+                {tag.title}
+            </span>
+        );
+    });
     return (
         <div className="search-result">
             <div className="search-result__img-container">
@@ -14,14 +22,13 @@ const SearchResult = ({ business }) => {
             </div>
             <div className="general-info">
                 <h2 className="general-info__title subtitle">{name}</h2>
-                <h2 className="general-info__profession">Restaurant</h2>
+                <h2 className="general-info__profession has-text-grey">Restaurant</h2>
                 <div className="general-info__rating">
                     <BusinessRating reviewCount={review_count} rating={rating} />
                 </div>
                 <div className="general-info__tags">
                     <span className="tag">$$</span>
-                    <span className="tag">Burgers</span>
-                    <span className="tag">Fast Food</span>
+                    {tags}
                 </div>
             </div>
             <div className="search-result__contact">

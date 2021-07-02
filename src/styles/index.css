@@ -185,6 +185,9 @@ img {
 .search-result .general-info__tags {
   display: flex;
 }
+.search-result .general-info__tags > * {
+  cursor: pointer;
+}
 .search-result .general-info__tags > *:not(:last-child) {
   margin-right: 0.2rem;
 }
