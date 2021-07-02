@@ -1,6 +1,14 @@
 import React from "react";
 
-const SearchResultsSummary = ({ searchTerm, searchLocation }) => {
+const SearchResultsSummary = ({ searchTerm, searchLocation, amountResults, shownResults }) => {
+    let resultStats = null;
+    if (amountResults && shownResults) {
+        resultStats = (
+            <p>
+                Showing 1-{shownResults} out of {amountResults} results
+            </p>
+        );
+    }
     return (
         <div className="search-summary__container">
             <div className="search-summary standard-container">
@@ -8,7 +16,7 @@ const SearchResultsSummary = ({ searchTerm, searchLocation }) => {
                     <h1 className="subtitle">
                         <strong>{searchTerm}</strong> {searchLocation}
                     </h1>
-                    <p>Showing 1-20 out of 200 results</p>
+                    {resultStats}
                 </div>
                 <div className="search-summary__filters">
                     <button className="button">

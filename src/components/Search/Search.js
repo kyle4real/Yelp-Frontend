@@ -16,11 +16,20 @@ const Search = () => {
         searchLocation
     );
 
+    // const search = (term, location) => {
+    //     console.log("i am called");
+    // };
+
     return (
         <div>
             <NavBar searchTerm={searchTerm} searchLocation={searchLocation} />
             <SubNav />
-            <SearchResultsSummary searchTerm={searchTerm} searchLocation={searchLocation} />
+            <SearchResultsSummary
+                searchTerm={searchTerm}
+                searchLocation={searchLocation}
+                amountResults={amountResults}
+                shownResults={businesses ? businesses.length : 0}
+            />
             <SearchResults businesses={businesses} />
         </div>
     );
